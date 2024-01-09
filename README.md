@@ -23,16 +23,16 @@ Ich habe mir heute viele Youtube-Videos mit etwa 200 Aufrufen und 20 Likes anges
 - [ ] Sehr simplen Server Programmieren, noch kein Chat aber Verbindungsfähig
 - [ ] Sehr simplen Client Programmieren, noch kein Chat aber Verbindungsfähig
 - [ ] Nachrichtenaustausch beginnen.
-
+'''
 Client:
--
+_------
 Connect: {IP:PORT}
 Connection Successfull
 
 Server-Side
 -
 [SERVER-LOG]: xxx.xxx.xx.xx connected.
-
+'''
 
 ✍️ Heute am 16.1 habe ich... (50-100 Wörter)
 
