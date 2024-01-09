@@ -24,13 +24,13 @@ Ich habe mir heute viele Youtube-Videos mit etwa 200 Aufrufen und 20 Likes anges
 - [ ] Sehr simplen Client Programmieren, noch kein Chat aber Verbindungsfähig
 - [ ] Nachrichtenaustausch beginnen.
 
-Client
------------------------
+Client:
+-
 Connect: {IP:PORT}
 Connection Successfull
------------------------
+
 Server-Side
------------------------
+-
 [SERVER-LOG]: xxx.xxx.xx.xx connected.
 
 
@@ -47,19 +47,17 @@ Server-Side
 Testfall-Nummer	Ausgangslage (Given)	Eingabe (When)	Ausgabe (Then)	Erfüllt?
 
 Client
------------------------
+-
 Connect: {IP:PORT}
 Name: {Name}
-Message: {Message}
----
-Connection Successfull
-Server: {IP:PORT}
-Name: {Message}
-[SERVER]: {name} You have been banned.
+[CLIENT LOG]: Connected to {IP:PORT} as {Name}
 
------------------------
+Message: {Message}
+[{Name}]: {Message}
+[SERVER]: {Name} has been banned.
+
 Server-Side
------------------------
+-
 [SERVER-LOG]: xxx.xxx.xx.xx:{name} connected
 name: {Message}
 ban {name}
