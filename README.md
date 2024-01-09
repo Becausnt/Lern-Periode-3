@@ -44,10 +44,10 @@ Server-Side
 - [ ] Simple Server Commands hinzufügen
 - [ ] bugfixes von  letztem mal
 
-Testfall-Nummer	Ausgangslage (Given)	Eingabe (When)	Ausgabe (Then)	Erfüllt?
+## Testfall-Nummer	Ausgangslage (Given)	Eingabe (When)	Ausgabe (Then)	Erfüllt?
 
-Client
--
+Client:
+_______
 Connect: {IP:PORT}
 Name: {Name}
 [CLIENT LOG]: Connected to {IP:PORT} as {Name}
@@ -56,11 +56,14 @@ Message: {Message}
 [{Name}]: {Message}
 [SERVER]: {Name} has been banned.
 
-Server-Side
--
+
+Server-Side:
+_______
 [SERVER-LOG]: xxx.xxx.xx.xx:{name} connected
 name: {Message}
 ban {name}
+
+
 ✍️ Heute am 23.1 habe ich... (50-100 Wörter)
 
 ☝️ Vergessen Sie nicht, bis zum 23.1 Ihren fixfertigen Code auf github hochzuladen, und in der Spalte Erfüllt? einzutragen, ob Ihr Code die Test-Fälle erfüllt
