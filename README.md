@@ -8,6 +8,7 @@ Im Moment bin ich mit meinen Noten zufrieden. Ich habe bis jetzt keine ungenüge
 Ich denke das Modul 319 war besonders wichtig, da es die Grundlage zum Programmieren legt. Mein Verbesserungsvorschlag am Ende der LP2 war folgender: 
 > Mehr Pausen machen, auch wenn es wirkt als ob man dadurch Zeit verliert ist man danach wieder schneller. Bei einem Fehler vielleicht mehr als einmal schauen ob ich ihn selbst lösen kann, ich denke falls man den Fehler
 > dann findet lernt man mehr daraus als wenn man es googelt(allerdings auch nicht Stunden an einem Fehler verbringen)
+
 Wo stehen Sie mit Ihren Noten? In welchen Modulen waren Sie besonders stark; in welchen sind die ungenügend? Welche davon sind besonders wichtig?
 Was hatten Sie sich am Ende von LP2 vorgenommen? Was war Ihr VBV? Wie könnten Sie diesen besonders gut üben?
 Was wäre ein geeignetes Projekt würd diese LP3?
