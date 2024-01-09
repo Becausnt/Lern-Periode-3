@@ -23,16 +23,16 @@ Ich habe mir heute viele Youtube-Videos mit etwa 200 Aufrufen und 20 Likes anges
 - [ ] Sehr simplen Server Programmieren, noch kein Chat aber Verbindungsfähig
 - [ ] Sehr simplen Client Programmieren, noch kein Chat aber Verbindungsfähig
 - [ ] Nachrichtenaustausch beginnen.
-'''
+```
 Client:
-_------
+------
 Connect: {IP:PORT}
 Connection Successfull
 
 Server-Side
--
+------
 [SERVER-LOG]: xxx.xxx.xx.xx connected.
-'''
+```
 
 ✍️ Heute am 16.1 habe ich... (50-100 Wörter)
 
@@ -45,9 +45,9 @@ Server-Side
 - [ ] bugfixes von  letztem mal
 
 ## Testfall-Nummer	Ausgangslage (Given)	Eingabe (When)	Ausgabe (Then)	Erfüllt?
-
+```
 Client:
-_______
+------
 Connect: {IP:PORT}
 Name: {Name}
 [CLIENT LOG]: Connected to {IP:PORT} as {Name}
@@ -58,11 +58,11 @@ Message: {Message}
 
 
 Server-Side:
-_______
+-----------
 [SERVER-LOG]: xxx.xxx.xx.xx:{name} connected
 name: {Message}
 ban {name}
-
+```
 
 ✍️ Heute am 23.1 habe ich... (50-100 Wörter)
 
