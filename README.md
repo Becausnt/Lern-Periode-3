@@ -19,26 +19,131 @@ Ich habe mir heute viele Youtube-Videos mit etwa 200 Aufrufen und 20 Likes anges
 
 
 ## 16.1.2024 Arbeitspakete
-- [ ] Wissen, dass ich mir in der letzten Woche angeeignet habe Repetieren.
-- [ ] Sehr simplen Server Programmieren, noch kein Chat aber Verbindungsfähig
-- [ ] Sehr simplen Client Programmieren, noch kein Chat aber Verbindungsfähig
+- [x] Wissen, dass ich mir in der letzten Woche angeeignet habe Repetieren.
+- [x] Sehr simplen Server Programmieren, noch kein Chat aber Verbindungsfähig
+- [x] Sehr simplen Client Programmieren, noch kein Chat aber Verbindungsfähig
 - [ ] Nachrichtenaustausch beginnen.
 
 ## Testfall
 ```
 Client:
 ------
-Connect: {IP:PORT}
 Connection Successfull
 
 Server-Side
 ------
-[SERVER-LOG]: xxx.xxx.xx.xx connected.
+[{DateTime.Now}] [CONNECTION]: Client has connected with the username: {Username}"
 ```
 
 ✍️ Heute am 16.1 habe ich... (50-100 Wörter)
+Heute habe ich an dem Tutorial weitergearbeitet, und habe einen Teil verstanden und einen Teil nicht verstanden. Je nach dem frage ich dann noch ob mir das jemand erklären kann. Das Programm funktioniert, es hat ein GUI und einen Server, der Server akzeptiert die Verbindung und Outputtet eine Log Nachricht, schliesst sich danach aber. Die Log Nachricht kann ich beliebig gestalten. Bis jetzt läuft alles nur auf dem Localhost aber ich denke das kommt dann später im Tutorial auch noch. Wenn ich mit dem Tutorial durch bin, möchte ich es auch noch selbstständig erweitern.
 
-☝️ Vergessen Sie nicht, bis zum 16.1 einen ersten Code auf github hochzuladen, und in der Spalte Erfüllt? einzutragen, ob Ihr Code die Test-Fälle erfüllt
+
+## Server
+Client handling
+```C#
+        static List<Client> _users;
+        static TcpListener _listener;
+        static void Main(string[] args)
+        {
+            _users = new List<Client>();
+            _listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 7891);
+            _listener.Start();
+
+
+            while (true)
+            {
+                var client = new Client(_listener.AcceptTcpClient());
+                _users.Add(client);
+
+                /* Broadcast connection to everyone. */
+            }
+
+
+        }
+```
+Client objekt
+```C#
+class Client
+{
+    public string Username { get; set; }
+    public Guid UID { get; set; }
+    public TcpClient ClientSocket { get; set; }
+
+    public Client(TcpClient client)
+    {
+        ClientSocket = client;
+        UID = Guid.NewGuid();
+
+        Console.WriteLine($"[{DateTime.Now}] [CONNECTION]: Client has connected with the username: {Username}");
+    }
+}
+```
+## Client
+Klasse die ich sop halb verstehe
+```C#
+namespace ChatApp.MVVM.Core
+{
+    public class RelayCommand : ICommand
+    {
+        private Action<object> execute;
+        private Func<object, bool> canExecute;
+
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
+        {
+            this.execute = execute;
+            this.canExecute = canExecute;
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return this.canExecute == null || this.canExecute(parameter);
+        }
+
+        public void Execute(object parameter)
+        {
+            this.execute(parameter);
+        }
+    }
+}
+```
+Verbindung zum Server aufbauen
+```C#
+        public RelayCommand ConnectToServerCommand {  get; set; }
+
+        private Server _server;
+        public MainViewModel()
+        {
+            _server = new Server();
+            ConnectToServerCommand = new RelayCommand(o => _server.ConnectToServer());
+        }
+```
+Funktion für den Verbindungsaufbau
+```C#
+    class Server
+    {
+        TcpClient _client;
+        public Server()
+            {
+                _client = new TcpClient();
+            }
+        public void ConnectToServer()
+        {
+            if (!_client.Connected)
+            {
+                _client.Connect("127.0.0.1", 7891);
+            }
+        }
+    }
+```
+
+Der Testfall ist erfüllt.
 
 # 23.1.2024 Arbeitspakete
 - [ ] Chat funktionalität hinzufügen
