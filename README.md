@@ -80,7 +80,7 @@ class Client
 }
 ```
 ## Client
-Klasse die ich sop halb verstehe
+Klasse die ich so halb verstehe
 ```C#
 namespace ChatApp.MVVM.Core
 {
