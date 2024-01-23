@@ -22,7 +22,7 @@ Ich habe mir heute viele Youtube-Videos mit etwa 200 Aufrufen und 20 Likes anges
 - [x] Wissen, dass ich mir in der letzten Woche angeeignet habe Repetieren.
 - [x] Sehr simplen Server Programmieren, noch kein Chat aber Verbindungsfähig
 - [x] Sehr simplen Client Programmieren, noch kein Chat aber Verbindungsfähig
-- [ ] Nachrichtenaustausch beginnen.
+- [x] Nachrichtenaustausch beginnen.
 
 ## Testfall
 ```
@@ -146,39 +146,73 @@ Funktion für den Verbindungsaufbau
 Der Testfall ist erfüllt.
 
 # 23.1.2024 Arbeitspakete
-- [ ] Chat funktionalität hinzufügen
-- [ ] Fähigkeit für mehrere Clients, und Client Namen hinzufügen
-- [ ] Simple Server Commands hinzufügen
-- [ ] bugfixes von  letztem mal
+- [x] Chat funktionalität hinzufügen
+- [x] Fähigkeit für mehrere Clients, und Client Namen hinzufügen
+- [x] Simple Server Commands hinzufügen
+- [x] bugfixes von  letztem mal
 
 ## Testfall
 ```
-Client:
-------
-Connect: {IP:PORT}
-Name: {Name}
-[CLIENT LOG]: Connected to {IP:PORT} as {Name}
+Enter Server IP:
+127.0.0.1
+Enter Server port:
+8888
+Connected to the chat server.
+Choose a name: Bruno
+Joined the chat successfully.
+「Bruno」: Hallo
+「Bruno」: /Help
+COMMANDS:
+/HELP:                  Shows this.
+/DM {username}:         Send private message to someone.
+/LIST:                  Lists all online users.
+/LEAVE:                 Leaves chat
+/CAT:                   Shows client-side ASCII cat.
+/AUTH {password}:       Authenticate as admin
+/CLEAR                  Clears Console.
 
-Message: {Message}
-[{Name}]: {Message}
-[SERVER]: {Name} has been banned.
+You have been Kicked.
 
+Server has disconnected.
 
 Server-Side:
 -----------
-[SERVER-LOG]: xxx.xxx.xx.xx:{name} connected
-name: {Message}
-ban {name}
+Enter port to run server on.(eg. 8888):
+8888
+Server started on 192.168.56.1:8888
+[SERVER]: Bruno has joined the chat.
+「Bruno」: Hallo
+/Help
+Server Commands:
+/KICK {username}|*              Kicks a user from Server, announces kick, can rejoin
+/SHADOWKICK {username}|*        Kicks a user from server, hides kick as error, can rejoin
+/BAN {username}                 Bans username
+/UNBAN {username}|*             Unbans username
+/IPBAN {username}               Forbids IP from joining server, watch out not to ban yourself.
+/IPUNBAN {username}|*           Allows IP to join server
+/RAW {message}                  Sends raw message to clients, don't forget '[Server]' or username in your message.
+/LIST                           Lists all online clients
+/LISTIP                         Lists all online clients and their IP's
+/OP {username}                  Gives a client Admin priviledges without Auth.
+/UNOP {username}|*              Removes a clients admin priviledges
+/LOCK {password}                Locks commands with Password, clears console.
+/CLEAR                          Empties console
+/BANLIST                        Lists all banned names and IP's
+/PWD                            Change admin Password, also activate admin.
+/kick Bruno
+[SERVER]: Bruno was kicked.
+[CLIENT]: ERROR BY Bruno: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine..
+[Bruno] has left the chat.
 ```
+Erfüllt: Ja
+
 
 ✍️ Heute am 23.1 habe ich... (50-100 Wörter)
-
+Heute habe ich sehr viele Befehle hinzugefügt, welche sie oben sehen können, alle diese Befehle sind voll funktionsfähig und einsatzbereit. Zudem kann der client sich als Admin anmelden. Dies tut er mit `/AUTH Passwort`. Das Password wird dann als SHA512-Hash an den Server gesendet, wo es mit dem SHA512-Hash des Passwortes des Servers abgeglichen wird, welches nur in der Server-Konsole mit `/PWD Passwort` geändert werden kann. Dies ist sicherer als Klartext, jeddoch immer noch anfällig für Pass-the-Hash attacken. Die Clients können miteinander Nachrichten austauschen und haben auch Befehle, welche alle auch oben aufgelistet sind. Der Server Funktioniert als Log und Administrator gleichzeitig, er hat die Rechte alle Nachrichten, auch Admin-Promotionen und DM's einzusehen. Falls der Server nur passiv genutzt werden soll kann man ihn jedoch mit `/LOCK Passwort` sperren, was alle Befehle deaktiviert. 
 ☝️ Vergessen Sie nicht, bis zum 23.1 Ihren fixfertigen Code auf github hochzuladen, und in der Spalte Erfüllt? einzutragen, ob Ihr Code die Test-Fälle erfüllt
 
 # 30.1.2024 Arbeitspakete
 - [ ] Bugfixes
-- [ ] Admin-role
-- [ ] Password Auth
 - [ ] Sauberer Code
 
 ✍️ Heute am 23.1 habe ich... (50-100 Wörter)
