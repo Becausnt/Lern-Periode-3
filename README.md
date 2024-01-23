@@ -209,7 +209,7 @@ Erfüllt: Ja
 
 ✍️ Heute am 23.1 habe ich... (50-100 Wörter)
 Heute habe ich sehr viele Befehle hinzugefügt, welche sie oben sehen können, alle diese Befehle sind voll funktionsfähig und einsatzbereit. Zudem kann der client sich als Admin anmelden. Dies tut er mit `/AUTH Passwort`. Das Password wird dann als SHA512-Hash an den Server gesendet, wo es mit dem SHA512-Hash des Passwortes des Servers abgeglichen wird, welches nur in der Server-Konsole mit `/PWD Passwort` geändert werden kann. Dies ist sicherer als Klartext, jeddoch immer noch anfällig für Pass-the-Hash attacken. Die Clients können miteinander Nachrichten austauschen und haben auch Befehle, welche alle auch oben aufgelistet sind. Der Server Funktioniert als Log und Administrator gleichzeitig, er hat die Rechte alle Nachrichten, auch Admin-Promotionen und DM's einzusehen. Falls der Server nur passiv genutzt werden soll kann man ihn jedoch mit `/LOCK Passwort` sperren, was alle Befehle deaktiviert. 
-☝️ Vergessen Sie nicht, bis zum 23.1 Ihren fixfertigen Code auf github hochzuladen, und in der Spalte Erfüllt? einzutragen, ob Ihr Code die Test-Fälle erfüllt
+
 
 # 30.1.2024 Arbeitspakete
 - [ ] Bugfixes
