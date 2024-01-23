@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleChatApp", "ConsoleChatApp\ConsoleChatApp.csproj", "{5E902B0C-7641-4EFF-A00C-833777DAEAA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppServer", "ConsoleAppServer\ConsoleAppServer.csproj", "{D0313943-F641-4CAC-958D-474FA9F03969}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E902B0C-7641-4EFF-A00C-833777DAEAA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E902B0C-7641-4EFF-A00C-833777DAEAA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E902B0C-7641-4EFF-A00C-833777DAEAA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E902B0C-7641-4EFF-A00C-833777DAEAA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0313943-F641-4CAC-958D-474FA9F03969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0313943-F641-4CAC-958D-474FA9F03969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0313943-F641-4CAC-958D-474FA9F03969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0313943-F641-4CAC-958D-474FA9F03969}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E04D4229-5EDB-45D4-AD29-79C9BE9180E2}
+	EndGlobalSection
+EndGlobal
