@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Net;
@@ -22,9 +22,11 @@ class ChatServer
         Console.OutputEncoding = Encoding.UTF8;
         Console.InputEncoding = Encoding.UTF8;
         Console.Title = "Simple TCP Chat Server";
+        
 
         // set up Server
         int port = 0;
+        bool serverStarted = false;
         do
         {
             try
@@ -33,12 +35,13 @@ class ChatServer
                 port = Convert.ToInt16(Console.ReadLine());
                 _server = new TcpListener(IPAddress.Any, port);
                 _server.Start();
+                serverStarted = true;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"[SERVER]: Failed to start Server | {ex}");
             }
-        } while (!_server.Server.IsBound);
+        } while (!serverStarted);
         Console.WriteLine($"Server started on {GetLocalIPAddress()}:{port}");
 
         pwdHash = "0".ToUpper(); //Unachievable Sha512 hash
@@ -495,7 +498,7 @@ class ChatServer
                                     SendMessage(client, $"[SERVER]: DM to {message.Substring(4 + message.Substring(4).Split(' ')[0].Length + 1)} failed. | {ex}");
                                 }
                             }
-                            catch (Exception ex) { }  
+                            catch { }  
                             break;
 
                         case "/LIST":
