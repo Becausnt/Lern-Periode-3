@@ -212,12 +212,12 @@ Heute habe ich sehr viele Befehle hinzugefügt, welche sie oben sehen können, a
 
 
 # 30.1.2024 Arbeitspakete
-- [ ] Bugfixes
-- [ ] Sauberer Code
+- [x] Bugfixes
+- [x] Sauberer Code
 
 ✍️ Heute am 23.1 habe ich... (50-100 Wörter)
+Ich habe heute eine Reflexion geschrieben, einen Bug in meinem Programm gefixt, eine kritische Sicherheitslücke geschlossen und eine lange Zeit nach der aktuellsten Version meines Projektes aus der LP2 gesucht.
 
-Reflexion
-Formen Sie Ihre Zusammenfassungen in Hinblick auf Ihren VBV zu einem zusammenhängenden Text von 100 bis 200 Wörtern (wieder mit Angabe in Klammern).
-
-Verfassen Sie zusätzlich einen kurzen Abschnitt, in welchem Sie über die Länge der Projekte reflektieren: Fanden Sie die 9-wöchtige LP2 oder die 4-wöchige LP3 angenehmer? Was bedeutet das für Ihre Planung der zukünftigen LP?
+## Reflexion
+Ich finde ich habe in dieser Lernperiode gut und effizient gearbeitet. Ich habe meine Projekt rechtzeitig abgeschlossen und mich an meine früheren VBV's gehalten und damit meine Arbeitseffizienz erhöht. Als weiteren VBV an mich selbst habe ich folgendes: Manchmal während dem Programmieren, inzwischen weniger als am Anfang, wenn ich über ein Problem nachdenke schweife ich mit den Gedanken ab und starre Löcher in meinen Monitor. Dies dauert aber meist nur kurze Zeit an, ist also nciht so ein grosses Problem.
+Von der Länge her, fand ich bisher alle LP's angenehm, da wir am Anfang(also in der LP-1) auch länger gebraucht haben um etwas zu Programmieren war es gut, das dies auch eine Längere LP war. Nun schaffen wir (wir = meine IMS-Klasse) es aber schon kompliziertere Projekte als in der LP-1 in kürzerer Zeit auf die Beine zu stellen. So lange die LP's also nicht zu schnell kürzer werden, finde ich es sogar gut das sie kürzer werden, da dadurch auch wirklich die Effizienz der Schüler gefordert wird.
